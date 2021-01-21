@@ -5,7 +5,6 @@ taxonomy:
         - docs
 ---
 
-
 ## Meet Laravel
 Laravel ist ein Webanwendungs-Framework mit ausdrucksstarker, eleganter Syntax. Ein Web-Framework bietet eine Struktur und einen Ausgangspunkt für die Erstellung Ihrer Anwendung, sodass Sie sich auf die Erstellung von etwas Erstaunlichem konzentrieren können, während wir uns um die Details kümmern.
 
