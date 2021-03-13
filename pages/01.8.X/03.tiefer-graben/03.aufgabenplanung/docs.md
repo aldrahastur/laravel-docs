@@ -26,3 +26,4 @@ Der Befehls-Scheduler von Laravel bietet einen neuen Ansatz für die Verwaltung 
 
 # Definieren von Zeitplänen
 Sie können alle Ihre geplanten Aufgaben in der Schedule-Methode der App\Console\Kernel-Klasse Ihrer Anwendung definieren. Schauen wir uns für den Anfang ein Beispiel an. In diesem Beispiel werden wir eine Closure planen, die jeden Tag um Mitternacht aufgerufen wird. Innerhalb der Closure werden wir eine Datenbankabfrage ausführen, um eine Tabelle zu löschen:
+
