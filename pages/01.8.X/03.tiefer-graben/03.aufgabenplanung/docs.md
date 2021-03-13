@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Aufgabenplanung | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T22:05:27+01:00'
-    'article:modified_time': '2021-03-13T22:05:27+01:00'
+    'article:published_time': '2021-03-13T22:06:00+01:00'
+    'article:modified_time': '2021-03-13T22:06:00+01:00'
     'article:author': aldrahastur
 ---
 
@@ -64,4 +64,25 @@ Zusätzlich zur Planung mit Closures können Sie auch aufrufbare Objekte planen.
 
 ```php
 $schedule->call(new DeleteRecentUsers)->daily();
+```
+
+## Planen von Artisan-Befehlen
+Zusätzlich zum Planen von Abschlüssen können Sie auch Artisan-Befehle und Systembefehle planen. Sie können z. B. die Methode "command" verwenden, um einen Artisan-Befehl entweder mit dem Namen oder der Klasse des Befehls zu planen.
+
+Wenn Sie Artisan-Befehle unter Verwendung des Klassennamens des Befehls planen, können Sie ein Array mit zusätzlichen Befehlszeilenargumenten übergeben, die dem Befehl beim Aufrufen übergeben werden sollen:
+
+```php
+use App\Console\Commands\SendEmailsCommand;
+
+$schedule->command('emails:send Taylor --force')->daily();
+
+$schedule->command(SendEmailsCommand::class, ['Taylor', '--force'])->daily();
+```
+
+## Planen von Aufträgen in der Warteschlange
+Die Job-Methode kann verwendet werden, um einen Job in der Warteschlange zu planen. Diese Methode bietet eine bequeme Möglichkeit, Aufträge in der Warteschlange zu planen, ohne die Call-Methode zu verwenden, um Closures zu definieren, die den Auftrag in die Warteschlange stellen:
+```php 
+use App\Jobs\Heartbeat;
+
+$schedule->job(new Heartbeat)->everyFiveMinutes();
 ```
