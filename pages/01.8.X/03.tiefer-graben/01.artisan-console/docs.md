@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Artisan Console | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T17:25:44+01:00'
-    'article:modified_time': '2021-03-13T17:25:44+01:00'
+    'article:published_time': '2021-03-13T17:39:17+01:00'
+    'article:modified_time': '2021-03-13T17:39:17+01:00'
     'article:author': aldrahastur
 ---
 
@@ -26,6 +26,8 @@ Artisan ist die in Laravel enthaltene Befehlszeilenschnittstelle. Artisan ist im
 Jeder Befehl enthält auch einen "Hilfe"-Bildschirm, der die verfügbaren Argumente und Optionen des Befehls anzeigt und beschreibt. Um einen Hilfebildschirm anzuzeigen, stellen Sie dem Namen des Befehls "help" voran:
 > php artisan help migrate
 
-## Laravel Sail
+### Laravel Sail
 Wenn Sie Laravel Sail als lokale Entwicklungsumgebung verwenden, denken Sie daran, die sail-Befehlszeile zu verwenden, um Artisan-Befehle aufzurufen. Sail wird Ihre Artisan-Befehle innerhalb der Docker-Container Ihrer Anwendung ausführen:
 > ./sail artisan list
+
+# Tinker (REPL)
