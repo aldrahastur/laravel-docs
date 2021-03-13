@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Aufgabenplanung | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T21:54:14+01:00'
-    'article:modified_time': '2021-03-13T21:54:14+01:00'
+    'article:published_time': '2021-03-13T21:58:15+01:00'
+    'article:modified_time': '2021-03-13T21:58:15+01:00'
     'article:author': aldrahastur
 ---
 
@@ -26,4 +26,38 @@ Der Befehls-Scheduler von Laravel bietet einen neuen Ansatz für die Verwaltung 
 
 # Definieren von Zeitplänen
 Sie können alle Ihre geplanten Aufgaben in der Schedule-Methode der App\Console\Kernel-Klasse Ihrer Anwendung definieren. Schauen wir uns für den Anfang ein Beispiel an. In diesem Beispiel werden wir eine Closure planen, die jeden Tag um Mitternacht aufgerufen wird. Innerhalb der Closure werden wir eine Datenbankabfrage ausführen, um eine Tabelle zu löschen:
+```
+<?php
+
+namespace App\Console;
+
+use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
+
+class Kernel extends ConsoleKernel
+{
+    /**
+     * The Artisan commands provided by your application.
+     *
+     * @var array
+     */
+    protected $commands = [
+        //
+    ];
+
+    /**
+     * Define the application's command schedule.
+     *
+     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @return void
+     */
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->call(function () {
+            DB::table('recent_users')->delete();
+        })->daily();
+    }
+}
+```
 
