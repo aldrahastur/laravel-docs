@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Artisan Console | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T17:44:27+01:00'
-    'article:modified_time': '2021-03-13T17:44:27+01:00'
+    'article:published_time': '2021-03-13T17:45:08+01:00'
+    'article:modified_time': '2021-03-13T17:45:08+01:00'
     'article:author': aldrahastur
 ---
 
@@ -31,6 +31,20 @@ Wenn Sie Laravel Sail als lokale Entwicklungsumgebung verwenden, denken Sie dara
 > ./sail artisan list
 
 ## Tinker (REPL)
+Laravel Tinker ist eine leistungsstarke REPL für das Laravel-Framework, die auf dem PsySH-Paket basiert.
+
+### Installation
+Alle Laravel-Anwendungen enthalten standardmäßig Tinker. Sie können Tinker jedoch mit Composer installieren, wenn Sie es zuvor aus Ihrer Anwendung entfernt haben:
+> composer require laravel/tinker
+
+### Nutzung
+Mit Tinker können Sie über die Kommandozeile mit Ihrer gesamten Laravel-Anwendung interagieren, einschließlich Ihrer Eloquent-Modelle, Jobs, Ereignisse und mehr. Um die Tinker-Umgebung zu betreten, führen Sie den Befehl tinker Artisan aus:
+> php artisan tinker
+
+Sie können die Konfigurationsdatei von Tinker mit dem Befehl vendor:publish veröffentlichen:
+> php artisan vendor:publish --provider="Laravel\Tinker\TinkerServiceProvider"
+
+### 
 
 # Commands schreiben
 
