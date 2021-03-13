@@ -21,4 +21,6 @@ metadata:
 
 # Einführung.
 Artisan ist die in Laravel enthaltene Befehlszeilenschnittstelle. Artisan ist im Stammverzeichnis Ihrer Anwendung als artisan-Skript vorhanden und bietet eine Reihe hilfreicher Befehle, die Sie bei der Erstellung Ihrer Anwendung unterstützen können. Um eine Liste aller verfügbaren Artisan-Befehle anzuzeigen, können Sie den Befehl list verwenden:
-> php artisan list
+> php artisan list <
+Jeder Befehl enthält auch einen "Hilfe"-Bildschirm, der die verfügbaren Argumente und Optionen des Befehls anzeigt und beschreibt. Um einen Hilfebildschirm anzuzeigen, stellen Sie dem Namen des Befehls "help" voran:
+> php artisan help migrate <
