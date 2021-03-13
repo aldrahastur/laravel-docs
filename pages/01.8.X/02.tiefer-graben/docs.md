@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Tiefer graben | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T17:10:27+01:00'
-    'article:modified_time': '2021-03-13T17:10:27+01:00'
+    'article:published_time': '2021-03-13T17:13:11+01:00'
+    'article:modified_time': '2021-03-13T17:13:11+01:00'
     'article:author': aldrahastur
 ---
 
