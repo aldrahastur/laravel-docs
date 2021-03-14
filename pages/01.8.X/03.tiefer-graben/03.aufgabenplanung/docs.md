@@ -14,8 +14,8 @@ metadata:
     'twitter:title': 'Aufgabenplanung | Laravel Docs in Deutsch'
     'twitter:site': '@aldrahastur'
     'twitter:creator': '@aldrahastur'
-    'article:published_time': '2021-03-13T22:06:00+01:00'
-    'article:modified_time': '2021-03-13T22:06:00+01:00'
+    'article:published_time': '2021-03-13T22:08:31+01:00'
+    'article:modified_time': '2021-03-13T22:08:31+01:00'
     'article:author': aldrahastur
 ---
 
@@ -86,3 +86,13 @@ use App\Jobs\Heartbeat;
 
 $schedule->job(new Heartbeat)->everyFiveMinutes();
 ```
+## Shell-Befehle einplanen
+Die exec-Methode kann verwendet werden, um einen Befehl an das Betriebssystem zu geben:
+
+```php
+$schedule->exec('node /home/forge/script.js')->daily();
+```
+
+## Optionen für die Zeitplanungsfrequenz
+Wir haben bereits einige Beispiele dafür gesehen, wie Sie einen Task so konfigurieren können, dass er in bestimmten Intervallen läuft. Es gibt jedoch noch viele weitere Task-Planungsfrequenzen, die Sie einem Task zuweisen können:
+
